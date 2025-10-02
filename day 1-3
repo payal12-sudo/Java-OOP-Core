@@ -1,0 +1,31 @@
+Breaking the Surface:
+
+These topics were covered 3 days back (uploading today):
+	•	Declaring a variable (Java cares about type)
+	•	Primitive types (“I’d like a double with extra foam, please”)
+	•	Java keywords
+	•	Reference variables (remote control to an object)
+	•	Object declaration and assignment
+	•	Objects on the garbage-collectible heap
+	•	Arrays (a first look)
+	•	How Java works
+	•	Code structure in Java
+	•	Anatomy of a class
+	•	The main() method
+	•	Looping
+	•	Conditional branching (if tests)
+	•	99 Bottles of Beer app
+	•	Phrase-o-matic program
+	•	Compiler vs. JVM (Fireside Chat)
+	•	Introduction to Inheritance
+	•	Introduction to Overriding methods
+	•	What’s in a class (methods, instance variables)
+	•	Creating my first object
+	•	Using main() effectively
+	•	Methods using object state (e.g., bark differently)
+	•	Method arguments and return types
+	•	Pass-by-value (variables are always copied)
+	•	Getters and Setters
+	•	Encapsulation (do it or risk humiliation 😅)
+	•	Using references in an array
+	•	More exercises & puzzles
