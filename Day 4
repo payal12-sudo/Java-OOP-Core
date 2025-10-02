@@ -1,0 +1,71 @@
+Today i learnt Mini project:
+Let’s build a Battleship-style 
+game: “Sink a Dot Com”
+Goal:
+Sink all three of the computer’s Dot Coms in the fewest guesses. You get a rating at the end based on performance.
+
+Grid:
+	•	Virtual 7x7 grid (rows: A-G, columns: 0-6).
+	•	Three Dot Coms, each occupying 3 consecutive cells.
+
+Gameplay:
+	•	Player enters a guess like A3 or C5.
+	•	Computer responds with:
+	    •	Hit → part of a Dot Com is hit.
+	    •	Miss → nothing hit
+	    •	You sunk [DotComName] → entire Dot Com is destroyed
+	•	Game ends when all three Dot Coms are sunk.
+
+<<<<<<<<<<<<<<<----------- MY code-------->>>>>>>>>>>>>>>>>
+                import java.util.*;
+
+public class SinkADotComEasy {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+
+        int gridSize = 7;
+
+        // Step 1: Place one DotCom of size 3 horizontally
+        int row = rand.nextInt(gridSize);
+        int col = rand.nextInt(gridSize - 2); // ensure it fits in row
+
+        // Store DotCom cells in a simple array
+        String[] dotCom = new String[3];
+        for (int i = 0; i < 3; i++) {
+            dotCom[i] = "" + (char)('A' + row) + (col + i);
+        }
+
+        int numOfGuesses = 0;
+        int hits = 0;
+
+        System.out.println("Welcome to Sink a Dot Com!");
+        System.out.println("A DotCom is hiding on a 7x7 grid (rows A-G, cols 0-6).");
+        System.out.println("Try to sink it by guessing cells like A3, C5, etc.");
+
+        // Step 2: Play until all 3 cells are hit
+        while (hits < 3) {
+            System.out.print("Enter your guess: ");
+            String guess = sc.nextLine().trim().toUpperCase();
+            numOfGuesses++;
+
+            boolean hit = false;
+            for (int i = 0; i < dotCom.length; i++) {
+                if (dotCom[i] != null && dotCom[i].equals(guess)) {
+                    System.out.println("Hit!");
+                    dotCom[i] = null; // mark as hit
+                    hits++;
+                    hit = true;
+                    break;
+                }
+            }
+
+            if (!hit) {
+                System.out.println("Miss");
+            }
+        }
+
+        System.out.println("You sunk the DotCom! 🎉");
+        System.out.println("You took " + numOfGuesses + " guesses.");
+    }
+}
