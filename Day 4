@@ -1,6 +1,5 @@
 Today i learnt Mini project:
-Let’s build a Battleship-style 
-game: “Sink a Dot Com”
+Let’s build a Battleship-style game: “Sink a Dot Com”
 Goal:
 Sink all three of the computer’s Dot Coms in the fewest guesses. You get a rating at the end based on performance.
 
@@ -69,3 +68,4 @@ public class SinkADotComEasy {
         System.out.println("You took " + numOfGuesses + " guesses.");
     }
 }
+
